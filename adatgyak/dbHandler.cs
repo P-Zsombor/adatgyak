@@ -91,7 +91,7 @@ namespace adatgyak
             try
             {
                 con.Open();
-                string query = $"insert into {tName} (prop1, prop2) values ('wasd',10)";
+                string query = $"insert into {tName} (prop1, prop2) values ({wasd1.prop1},'{wasd1.prop2}')";
                 MySqlCommand com = new MySqlCommand(query, con);
                 com.ExecuteNonQuery();
                 com.Dispose();
